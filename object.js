@@ -29,7 +29,22 @@ const user = {
  
  * @param {Object} person
  */
+// 1a.use for in to loop through objects to find properties.
+//1b. use for in for [{}] to loop through properties of objects
+// you can use for of/ or for in loop to loop through an aray.
 
-function listPerson(person) {}
+function listPerson(person) {
+  
+  for (let per in person){
+      if (typeof person[per] === "object"){
+        for ( let p in person[per]){
+          console.log(person[per][p])
+        }
+      }else {
+        console.log(person[per])
+      }
+    }
+  }
 
-listPerson(user);
+
+console.log(listPerson(user));
