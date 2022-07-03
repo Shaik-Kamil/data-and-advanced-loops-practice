@@ -30,6 +30,12 @@ const values = [
  * @param {Array} array 
  */
 
-function logIt(array) {}
+function logIt(array) {
+  // let accumulator = 0 
+  for (let i = 0; i < array.length;  i++){
+    console.log(array[i])
+  }
+  // console.log(array[i]);
+}
 
-logIt(values);
+console.log(logIt(values));
