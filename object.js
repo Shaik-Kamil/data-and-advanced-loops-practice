@@ -29,7 +29,7 @@ const user = {
  
  * @param {Object} person
  */
-// 1a.use for in to loop through objects to find properties.
+// 1a.use for in to loop through properties of objects.
 //1b. use for in for [{}] to loop through properties of objects
 // you can use for of/ or for in loop to loop through an aray.
 
