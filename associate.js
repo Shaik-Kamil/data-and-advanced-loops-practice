@@ -64,12 +64,12 @@ const ticketInfo = {
  * @return {string}
  */
 function findPrice(tickets, info) {
-  // if (info.ticketType === `movie` || info.ticketType === `education` || info.ticketType === `terrace`){
-  //   return `${tickets[`extras`][info.ticketType][`description`]} for a ${info.entrantType} is $${(tickets[`extras`][info.ticketType][`priceInCents`][info.entrantType]/100).toFixed(2)}`
-  // }else {
-  //   return `${tickets[info.ticketType][`description`]} for a ${info.entrantType} is $${(tickets[info.ticketType][`priceInCents`][info.entrantType]/100).toFixed(2)}`
-  // }
-  return `${tickets.general.description} for a child is $${(ticketTypes.general.priceInCents.child/100).toFixed(2)}`
+  if (info.ticketType === `movie` || info.ticketType === `education` || info.ticketType === `terrace`){
+    return `${tickets[`extras`][info.ticketType][`description`]} for a ${info.entrantType} is $${(tickets[`extras`][info.ticketType][`priceInCents`][info.entrantType]/100).toFixed(2)}`
+  }else {
+    return `${tickets[info.ticketType][`description`]} for a ${info.entrantType} is $${(tickets[info.ticketType][`priceInCents`][info.entrantType]/100).toFixed(2)}`
+  }
+  // return `${tickets.general.description} for a child is $${(ticketTypes.general.priceInCents.child/100).toFixed(2)}`
 }
 
 console.log(findPrice(ticketTypes, ticketInfo));
