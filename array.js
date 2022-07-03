@@ -32,8 +32,11 @@ const values = [
 
 function logIt(array) {
   // let accumulator = 0 
+  let iterator = array.values();
   for (let i = 0; i < array.length;  i++){
-    console.log(array[i])
+    // console.log(iterator.next().value)
+    console.log(array[i]) 
+    
   }
   // console.log(array[i]);
 }

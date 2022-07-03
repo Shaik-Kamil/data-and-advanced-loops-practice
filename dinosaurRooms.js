@@ -117,6 +117,23 @@ const rooms = [
  * @returns {string} Returns a dynamic string
  */
 
-function associateDinosaur(dinoRooms, dinos, id) {}
+function associateDinosaur(dinoRooms, dinos, id) {
+
+  let accumulator = ""
+  let keys = null
+  let name = ""
+  for (let obj of dinoRooms){
+    if( id === obj.roomId){
+      accumulator = obj.name
+      keys += obj.dinosaurs
+    }
+  }
+  for (let dino in dinos){
+    if(keys.includes(dinos[dino].dinosaurId)){
+      name += `${dinos[dino].name}- (${dinos[dino].meaningOfName}) \n`
+    }
+  }
+  return `Dinosaurs associated with the ${accumulator}:\n----------------------------------------------------------\n${name}`
+}
 
 console.log(associateDinosaur(rooms, dinosaurs, 'L72moIRcrX'));
