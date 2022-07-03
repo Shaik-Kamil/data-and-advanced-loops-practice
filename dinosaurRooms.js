@@ -122,12 +122,14 @@ function associateDinosaur(dinoRooms, dinos, id) {
   let accumulator = ""
   let keys = null
   let name = ""
+// use for of to loop through arrays;
   for (let obj of dinoRooms){
     if( id === obj.roomId){
       accumulator = obj.name
       keys += obj.dinosaurs
     }
   }
+  // use for in for [{}] to loop through properties of objects;
   for (let dino in dinos){
     if(keys.includes(dinos[dino].dinosaurId)){
       name += `${dinos[dino].name}- (${dinos[dino].meaningOfName}) \n`
